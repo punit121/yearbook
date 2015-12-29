@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>	
 	<div class="row">
 		<h2 style="text-align:center" >Register to Yearbook 2015 </h2><br/><br/>
-		<form action="" class="form-horizontal" role="form" method="post">
+		<form action="/member_area.php" class="form-horizontal" role="form" method="post">
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="roll">Roll No.</label>
 				<div class="col-sm-5">

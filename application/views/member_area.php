@@ -1,10 +1,10 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 </head>
 <body>
-Hello <?php echo $_POST['email1']  ?>
+Hello <?php echo $eid;  ?>
 </body>
 </html>
 

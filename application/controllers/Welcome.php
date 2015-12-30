@@ -20,9 +20,11 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->view('welcome_message');	
+	}
 
-		
+	function member_area() {
+		$this->load->view('member_area',$_POST);
 	}
 
 	function create_member()
@@ -34,7 +36,7 @@ class Welcome extends CI_Controller {
 		if($query=$this->membership_model->create_member())
 		{
 			$data['account_created'] = 'Your Account Has Been Created'.
-			$this->load->view('welcome',$data);
+			$this->load->view('welcome',$GLOBALS['data']);
 
 		}
 

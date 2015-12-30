@@ -37,7 +37,85 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>	
 	<div class="row">
 		<h2 style="text-align:center" >Register to Yearbook 2015 </h2><br/><br/>
-		<form action="/member_area.php" class="form-horizontal" role="form" method="post">
+		<?php 
+		$this->load->helper('form');
+		$formatt = array('class' =>'form-horizontal',
+						 'method' =>'post',
+						 'role'=>'form',
+						 );
+		echo form_open('welcome/member_area',$formatt);
+		?>
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="roll">Roll No.</label>
+			<div class="col-sm-5">
+				<?php
+				$froll = array('name' => 'roll' ,
+								'class' => 'form-control',
+								'placeholder' => 'Enter Your Name' );
+				echo form_input($froll);
+				?>
+			</div>
+			
+		</div>	
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="dep">Department</label>
+			<div class="col-sm-5">
+				<?php
+				$fdep = array('name' => 'dep' ,
+								'class' => 'form-control',
+								'placeholder' => 'Enter Your Department' );
+				echo form_input($fdep);
+				?>
+			</div>
+		
+		</div>	
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="dob">Date-of-Birth</label>
+			<div class="col-sm-5">
+				<?php
+				$fdob = array('name' => 'dob' ,
+								'class' => 'form-control',
+								'placeholder' => 'Enter Your Date of Birth' );
+				echo form_input($fdob);
+				?>
+			</div>
+			
+			</div>	
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="perf">Email ID</label>
+			<div class="col-sm-5">
+				<?php
+				$fid = array('name' => 'eid' ,
+								'class' => 'form-control',
+								'placeholder' => 'Enter Your Email ID',
+								'type' => 'email' );
+				echo form_input($fid);
+				?>
+			</div>
+		
+		</div>	
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="pass">Password</label>
+			<div class="col-sm-5">
+				<?php
+				$fpas = array('name' => 'pas' ,
+								'class' => 'form-control',
+								'placeholder' => 'Enter Preferred Password' );
+				echo form_password($fpas);
+				?>
+			</div>
+		
+		</div>	
+		<div class="form-group">
+			<label class="control-label col-sm-2" ></label>
+			<div class="col-sm-5">
+				<?php
+				echo form_submit('sub','Submit');
+				?>
+			</div>
+		
+		</div>
+		<!--<form action="/member_area.php" class="form-horizontal" role="form" method="post">
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="roll">Roll No.</label>
 				<div class="col-sm-5">
@@ -78,7 +156,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="col-sm-5">
 					<button class="btn btn-success">Submit</button>
 				</div>
-			
+			-->
 			</div>	
 		</form>	
 	</div>
@@ -87,4 +165,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </body>
 </html>
-

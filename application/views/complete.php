@@ -3,8 +3,6 @@
 <head>
 	<title></title>
 </head>
-<body>
-Hello <?php echo $email1;  ?>
+<body>Hello <?php echo $eid ;?>
 </body>
 </html>
-

@@ -20,15 +20,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div class = "container">
  	<div style="float:right;position:relative;top:20px;">
- 	<form class="form-inline" method="post" role="form">
+ 	<?php 
+ 	$this->load->helper('form');
+ 	$for=array('class' => 'form-inline',
+ 				'method' => 'post',
+ 				'role' => 'form',
+
+ 			  );		
+ 	echo form_open('welcome/member_area',$for);
+ 	?>
 		  <div class="form-group">
-		   
-		    <input type="email" class="form-control" id="email1" name="email1" placeholder="Enter Your Email" />
-		  </div>
-		  <div class="form-group">
+		   <?php
+				$email1 = array('name' => 'email1' ,
+								'class' => 'form-control',
+								'placeholder' => 'Enter Your Email' );
+				echo form_input($email1);
+				?>
 		    
-		    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter Your Password" /> 
 		  </div>
+		  <div class="form-group">
+		    <?php
+				$pwd = array('name' => 'pwd' ,
+								'class' => 'form-control',
+								'placeholder' => 'Enter Your Password' );
+				echo form_input($pwd);
+				?>
+
+		   
+		  </div>
+
+
 		  <button type="submit" class="btn btn-success">Submit</button>
 	</form>
 	</div>
@@ -43,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						 'method' =>'post',
 						 'role'=>'form',
 						 );
-		echo form_open('welcome/member_area',$formatt);
+		echo form_open('welcome/complete',$formatt);
 		?>
 		<div class="form-group">
 			<label class="control-label col-sm-2" for="roll">Roll No.</label>

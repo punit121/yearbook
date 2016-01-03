@@ -8,8 +8,8 @@ class Membership_model extends CI_Model
 	function validate()
 	{
 		# code...
-		$this->db->where('email1',this->input->post('email1'));
-		$this->db->where('pwd',this->input->post('pwd'));
+		$this->db->where('eid',$this->input->post('eid'));
+		$this->db->where('pwd',$this->input->post('pwd'));
 		$query=$this->db->get('users');
 		
 		if($query->num_rows()==1)

@@ -27,6 +27,9 @@ class Welcome extends CI_Controller {
 		$this->load->view('member_area',$_POST);
 	}
 
+	function complete() {
+		$this->load->view('complete',$_POST);
+	}
 	function create_member()
 	{
 		$this->load->model('membership_model');
@@ -56,7 +59,7 @@ class Welcome extends CI_Controller {
 				{
 
 					$data=array(
-						'email1'=>$this->input->post('email1'),
+						'eid'=>$this->input->post('eid'),
 						'is_logged_in'=>true
 						);
 					$this->session->set_userdata($data);
